@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <title>MODULES</title>
+   <link rel="icon" type="image/ico" href="Images/favicon.ico">
+ 
+   <link rel="stylesheet" type="text/css" href="../css/modules.css">
+   <link rel="stylesheet" type="text/css" href="../css/index.css">
+   <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+   <meta name="description" content="Petit jeu ludique sur le cyber-espace et le monde qui l'entoure By Hackcess / Modules ">
+
+</head>
+<body>
+   
+<style>
+  a::before {
+    content: "";
+  }
+  
+  a::after {
+    content: "";
+  }
+  
+</style>
+    
+    <div class="CSShackcess">
+      <div id="header">
+        <div id="particles"></div>
+        
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s1"></s> 
+        <s id="s2"></s>
+        <s id="s3"></s>
+        <s id="s4"></s>
+      
+        <div class="slider">
+          <div style="background: url(../Images/cyberharcelement.jpg); background-repeat:no-repeat;width:100%;background-position:center;">
+           <h2 style="color:rgb(255, 255, 255);"><b>Premier module : "Cyberharcèlement"</b></h2>
+            <p> <a href="cyberharcelement.html"><strong>Clique ici pour commencer</strong></a></p>
+          </div>
+          <div style="background: url(../Images/coding.jpg); background-repeat:no-repeat;width:100%;background-position:center;">
+           <h2 style="color:rgb(255, 255, 255);"><b>Deuxième module : "Internet"</b></h2>
+            <p><a href="internet.html" style="text-decoration:none;"><strong>Clique ici pour commencer</strong></a></p>
+          </div>
+          <div style="background: url(../img/.jpg); background-repeat:no-repeat;width:100%;background-position:center;">
+            <h2 style="color:rgb(255, 255, 255);"><b>En dev</b></h2>
+
+            <p><a href=""><strong>Clique ici pour commencer</strong></a></p>
+          </div>
+          <div style="background: url(../Images/quiz.jpg); background-repeat:no-repeat;width:100%;background-position:center;">
+            <h2 style="color:rgb(255, 255, 255);"><b>Quatrième module : "Quiz " </b></h2>
+    
+            <p><a href="quiz.html"><strong>Clique ici pour commencer</strong></a></p>
+          </div>
+        </div>
+        
+        <div class="prevNext">
+          <div><a href="#s4"></a><a href="#s2"></a></div>
+          <div><a href="#s1"></a><a href="#s3"></a></div>
+          <div><a href="#s2"></a><a href="#s4"></a></div>
+          <div><a href="#s3"></a><a href="#s1"></a></div>
+        </div>
+
+        <div class="bullets">
+          <a href="#s1" style="color:blue;">1</a>
+          <a href="#s2">2</a>
+          <a href="#s3">3</a>
+          <a href="#s4" style="color:rgba(255, 0, 47, 0.671);">4</a>
+        </div>
+    
+      </div>
+    <div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/particles.min.js"></script>
+    <script src="../js/index.js"></script>
+
+    <script>
+      particlesJS("particles", {"particles":{"number":{"value":40,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
+  
+ 
+
+</body>
+
+
+</html>
