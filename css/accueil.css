@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
 html {
@@ -220,7 +219,6 @@ body {
 .fondu-out {
     opacity: 0;
     transition: opacity 1.5s ease-out;
-=======
 @import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
 html {
@@ -442,5 +440,4 @@ body {
 .fondu-out {
     opacity: 0;
     transition: opacity 1.5s ease-out;
->>>>>>> a210f56 (UPDATE)
 }
