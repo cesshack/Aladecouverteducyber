@@ -220,9 +220,6 @@ body {
     opacity: 0;
     transition: opacity 1.5s ease-out;
 @import 'https://fonts.googleapis.com/css?family=Inconsolata';
-
-html {
-  min-height: 100%;
 }
 
 body {
