@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/accueil.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <meta name="description" content="Petit jeu ludique sur le cyber-espace et le monde qui l'entoure By Hackcess / QUIZ">
-
 </head>
 <body>
   <style>
@@ -27,8 +26,7 @@
   <header>
     <h3 id="view-high-scores">Score</h3>
     <h3 id="time-left">Temps restant: <span id="timer" class="quiz-timer"></span></h3>
-</header>
-
+  </header>
     <div class=Terminal>
         <div class="fakeButtons fakeClose"></div>
         <div class="fakeButtons fakeMinimize"></div>
@@ -42,24 +40,21 @@
       </div>
     <main>
       <section id="start-quiz-container" class="show">
-        <div class="container">
-            <h1>Quiz Cybersécurité</h1>
-            <h4> Voici un petit quiz pour tester ta compréhension sur les modules précédants.
-              Tu peux t'aider des pages précédantes mais tu perdras du temps.
-            Répond juste et rapidement pour être le meilleur et prouver que tu as compris pourquoi la cybersécurité est très importante et comment se protéger.
-            </h4>
-            <center><button class="btn start-end" id="start-game">Commencer le quiz.</button></center>
+        <div class="row">
+          <div class="container">
+              <h1>Quiz Cybersécurité</h1>
+              <h4> Voici un petit quiz pour tester ta compréhension sur les modules précédants.
+                Tu peux t'aider des pages précédantes mais tu perdras du temps.
+              Répond juste et rapidement pour être le meilleur et prouver que tu as compris pourquoi la cybersécurité est très importante et comment se protéger.
+              </h4>
+              <center><button class="btn start-end" id="start-game">Commencer le quiz.</button></center>
+          </div>
         </div>
-     
-  <div class="test">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <center><a href="../html/modules.html">Revenir aux modules</a></center>
-  </div>
+        <div class="row">
+          <div class="container">
+            <center><a href="../html/modules.html">Revenir aux modules</a></center>
+          </div>
+        </div>
     </section>
 
     <section id="question-container" class="hide">
@@ -69,37 +64,47 @@
         </div>
     </section>
 
+    <!-- section gérée par jsquiz -->
     <section id="answer-key-container" class="container hide">
         <div id="right-ans" class="answer-key show">
-            <h4 id="ans-good" class="right-or-wrong">Correcte &#9989 </h4>
+            <h4 id="ans-good" class="right-or-wrong"></h4>
         </div>
     </section>
-
+    
+    <!-- derniere page du quizz -->
     <section id="end-quiz-container" class="container hide">
-        <div id=final-score-message>
-            <h1>C'est fini!</h1>
-            <h2>Ton score final: <span id="final-score-value"></span></h2>
+      <div class="row">
+        <div class="container">
+          <div id=final-score-message>
+              <h1>C'est fini!</h1>
+              <h2>Ton score final: <span id="final-score-value"></span></h2>
+          </div>
         </div>
-        <form id="submit-score-form" class="initials">
+      </div>
+      <div class="row">
+        <div class="container">
+          <form id="submit-score-form" class="initials">
             <h4> Entre un nom pour inscrire ton score dans le "hall of fame" et tenter d'être parmis les meilleurs :
                 <input type="text" name="initials" id="initials" class="text-input" />
                 <button class="btn startend" id="submit-score" type="submit">Soumission</button>
             </h4>
-    <center><a href="../js/quiz.js">Les réponses</a></center>
-        </form>
-  <div class="test">
-    <br>
-    <br>
-    <center><a href="../html/modules.html">Revenir aux modules</a></center>
-  </div>
+          </form>
+          <button class="btn" id="rep-btn">Les réponses</button>
+          <div id="rep-sect">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <center><a href="../html/modules.html">Revenir aux modules</a></center>
+        </div>
+      </div>
     </section>
-
     <section id="high-scores-container" class="container hide">
         <h1 class="high-score">Liste des scores</h1>
         <ol id="high-score-list" class="score-list"></ol>
         <div>
             <button class="btn" id="go-back">Recommencer</button>
-            
           <div id="maDIV" style="display:none;">
             <button class="btn" id="clear-high-scores">Effacer le classement</button>
           </div>
@@ -107,10 +112,11 @@
     </section>
 
 </main>
-
+<script src="../js/jquery.min.js"></script>
 <script src="../js/quiz.js"></script>
 <script src="../js/jsquiz.js"></script>
 <script src="../js/index.js"></script>
+<script src="../js/repquiz.js"></script>
 <script>
 function maFonction() {
 var div = document.getElementById("maDIV");
