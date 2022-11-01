@@ -40,10 +40,20 @@
     padding-right: 20px;
   }
   /* Container styles */
+
+table, th, td{
+  border:1px solid black;
+}
+
+.row{
+  display: block;
+  width:100%;
+}
+
 .container {
     padding: 20px;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: auto;
     align-items: flex-start;
     justify-content: flex-start;
@@ -96,7 +106,7 @@
     text-align: left;
   }
   .show {
-    display: flex;
+    display: block;
   }
   
   .hide {
