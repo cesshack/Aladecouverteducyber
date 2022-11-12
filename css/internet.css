@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
+
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+span{
+	color: red;
+	font-family: "Alfa Slab One", cursive;
+}
+
+.Msg{
+	
+    position: relative;
+	top: 100;
+	display: inline;
+	border: 12px solid #B22222;
+	border-radius: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+	
+
+.button{
+	padding: 6px 10px;
+	background: #FC7F3C;
+	color: black;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 2rem;
+	outline: none;
+	border: 2px solid black;
+}
+
+.dropbtn {
+    background-color: #FC7F3C;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	z-index: 10;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 2rem;
+	outline: none;
+	border: 2px solid black;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #FC7F3C;
+	z-index: 10;
+
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	z-index: 10;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 10;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	z-index: 10;
+}
+
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	z-index: 10;
+	}
+
+
+.show {
+	display:block;
+	z-index: 10;
+	}
+
+p{
+	opacity: 1;
+}
+
+body,html{
+	background-image: url(https://www.sitrain-learning.siemens.com/dam/jcr:b944ebb8-b01c-4516-b71b-1c52a1ad9a04/Cyber-security.jpeg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+header{
+	width: 100%;
+	height: 70px;
+	background-color: black;
+	opacity: 0.7;
+}
+
+span{
+	color: #ffffff;
+}
+
+ul{
+	width: auto;
+	float: right;
+	margin-top: 8px;
+	padding: 6px;
+
+}
+
+li{
+	display: inline-block;
+	padding: 15px 30px;
+}
+
+a{
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	font-family: Poppins;
+	font-size: 1.2vw;
+}
+
+a:hover{
+	color: #F0c330;
+	transition: 0.5s;
+}
+
+img{
+	width: 100%;
+	margin-top: -16px;
+}
+
+body{
+	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+
+.testeee{
+	opacity: 1;
+	z-index: 1;
+}
+
+
+
+.jumbotron {
+  background-image: url("https://cdn.wallpapersafari.com/78/92/7ZBPUh.png");
+  background-size: cover;
+  height: 100%;
+  
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 30px;
+}
+
+.column2 {
+  float: right;
+  width: 30%;
+  padding: 30px;
+}
+
+.column3 {
+  float: right;
+  width: 30%;
+  padding: 30px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row{
+	justify-content: center;
+}
+
+
+.jumbotron{	
+	opacity: 0.9;
+	background-color: black;
+}
+
+.container{	
+	color : white;
+}
+
+.ancre{
+	text-align: center;
+}
+
+.fleche{
+	text-align: center;
+	padding-bottom: 0.7rem
+}
+
+.date{
+	position: relative;
+
+}
+
+h4{
+	display: none;
+}
+
+.buttons{
+	padding: 10px 30px;
+	background: #FC7F3C;
+	color: black;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 2rem;
+	outline: none;
+	border: 2px solid black;
+}
+
+#menu{
+	display:none;
+	text-align: right;
+}
+
+@media screen and (max-width: 1100px) {
+
+header{
+	width: 100%;
+	height: 150px;
+	background-color: black;
+	opacity: 0.7;
+}
+
+.button{
+	position: relative;
+	bottom: -40px;
+}
+
+.center{
+	display:none;
+}
+
+h4{
+	display: block;
+	position: relative;
+	text-align: right;
+	top: -22px;
+}
+
+}
+
+.header{
+
+}
+
+.nav .menu-bar{
+	box-shadow: 1px 2px 4px grey;
+	text-align: center;
+	width: 100%;
+	background: rgba(2,2,2,0.7);
+}
+
+.menu-bar li{
+
+	list-style-type: none;
+	display: inline-block;
+	padding: 30px;
+	margin: 0px 20px;
+	font-size: 25px;
+	font-family: Arial;
+	cursor: pointer;
+}
+
+h1{
+	color: red;
+	font-family: "Alfa Slab One", cursive;
+}
+
+span{
+	color: #ffffff;
+}
+
+
+.container{	
+	color : white;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto 50px;
+}
+
+.password-strength {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.js-hidden {
+  display: none;
+}
+
+.popup-wrapper {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    font-family: arial;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+
+}
+
+.popup-close {
+    position: absolute;
+    top:5px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.popup a{
+    background: crimson;
+    color: wheat;
+    text-decoration: none;
+    padding: 6px 10px;
+}
+
+.rouge
+{
+	color : red;
+}
+
+
