@@ -17,14 +17,15 @@
       <div class='_object' data-object="console" data-id="console" data-params='["Bienvenue sur ce module ou vous allez découvrir l&#39histoire de l&#39informatique ainsi que quelques cyber-attaques. Pour passer au module suivant, répondez aux différentes questions. TAPEZ ? POUR VOIR LA QUESTION ACTIVE"]'></div>
       <div class='_object' data-object="navbar" data-id="navbar"></div>
       <div class='_object' data-object="page" data-params='["navbar"]' data-id="Informatique">
+         <div id="informatique-timeline"  style="width: 100%; height: 600px"></div>
       </div>
       <div class='_object' data-object="page" data-params='["navbar"]' data-id="Cyberattaques">
          <div id="cyberattaque-timeline"  style="width: 100%; height: 600px"></div>
       </div>
-      
    </div>
 </body>
 <script>
+   timeline = new TL.Timeline("informatique-timeline", 'https://docs.google.com/spreadsheets/d/1L95etTqFo797ZbZi3akdzz6tAs8z_BiQrFIZAELIJLs/edit?pli=1#gid=0');
    timeline = new TL.Timeline("cyberattaque-timeline", 'https://docs.google.com/spreadsheets/d/1bSlPpSTcUdbx5qkdVv1gWuhab14s6Np3ZUpqYbsDoug/edit?usp=sharing');
 </script>
 <script src="../js/data.js"></script>
