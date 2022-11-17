@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <title>MODULES</title>
+   <link rel="icon" type="image/ico" href="Images/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="../css/modules.css">
+   <link rel="stylesheet" type="text/css" href="../css/index.css">
+   <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+   <link rel="stylesheet" type="text/css" href="../css/cyberattaque.css">
+   <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+   <script src="../js/timeline.js"></script>
+   <meta name="description" content="Petit jeu ludique sur le cyber-espace et le monde qui l'entoure By Hackcess / Modules ">
+</head>
+<body>
+   <div id="game-frame">
+      <div class='_object' data-object="console" data-id="console" data-params='["Bienvenue sur ce module ou vous allez découvrir l&#39histoire de l&#39informatique ainsi que quelques cyber-attaques. Pour passer au module suivant, répondez aux différentes questions. TAPEZ ? POUR VOIR LA QUESTION ACTIVE"]'></div>
+      <div class='_object' data-object="navbar" data-id="navbar"></div>
+      <div class='_object' data-object="page" data-params='["navbar"]' data-id="Informatique">
+      </div>
+      <div class='_object' data-object="page" data-params='["navbar"]' data-id="Cyberattaques">
+         <div id="cyberattaque-timeline"  style="width: 100%; height: 600px"></div>
+      </div>
+      
+   </div>
+</body>
+<script>
+   timeline = new TL.Timeline("cyberattaque-timeline", 'https://docs.google.com/spreadsheets/d/1bSlPpSTcUdbx5qkdVv1gWuhab14s6Np3ZUpqYbsDoug/edit?usp=sharing');
+</script>
+<script src="../js/data.js"></script>
+<script src="../js/gamejs.js"></script>
