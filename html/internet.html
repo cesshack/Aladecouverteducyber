@@ -41,12 +41,12 @@
         <div class="w3-container w3-sand"><br> 
          <h1><span style="color: rgb(255, 255, 255); text-decoration: underline;"><b>Les cookies internet et ses dangers.</b></span></h1><br><br>
            <center><img src="../Images/cookies.png" style="max-width:50%; max-height:50%; text-align:center;"><br></center><br>
-         <h6>Les <b>cookies</b> sont des <i>trackers de fichier « texte »</i> qui permettent de connecter les utilisateurs et les sites Web. Ils font office de <u><i>carte d’identité en ligne</i></u>, aidant un site Web à se souvenir de vos choix, activés et vos préférences. <br><br>
+         <h6>Les <b>cookies</b> sont des <i>trackers de fichiers « texte »</i> qui permettent de connecter les utilisateurs et les sites Web. Ils font office de <u><i>carte d’identité en ligne</i></u>, aidant un site Web à se souvenir de vos choix, activés et vos préférences. <br><br>
                  
          Les cookies jouent <u>un rôle dans presque tous les sites Internet</u> de la mémorisation des informations de connexion et des articles du panier en ligne, à l’aide d’entreprises pour créer des publicités ciblées.</b></p>
          <h6> <b><u>Les cookies sont nécessaires</u></b>, ils vont permettre de se connecter à un site et de <i><u>garder en mémoire nos préférences.</u></i><br>Cependant, <i><b>une personne malveillante</b> pourra les utiliser pour vous localiser à une vingtaine de mètres près si vous n'utilisez pas de protections, pour autoriser une ouverture de pop-up en continue ou même pour venir se coller dans les fichiers de votre ordinateur même après suppression afin de recueillir vos données.</i></p>
          <h6> Lorsque vous liker un post sur Twitter, Instagram ou encore Facebook, il s'agit d'un cookie, c'est un type différent. Celui-ci prend certaines informations, il est alors facile de faire passer un simple clique pour une banalité alors qu'enfaite, l'on peut / ou l'on veut, vous cibler avec différentes attaques, ou vols d'informations qui sont parfois même presque invisibles.
-         <h6><span style="color: rgb(255, 255, 255);"><b>Nos conseils pour se protéger des attaques malveillants de cookies :</b></span></p>
+         <h6><span style="color: rgb(255, 255, 255);"><b>Nos conseils pour se protéger des attaques malveillantes de cookies :</b></span></p>
          <h6><li>- <b><u>Ne pas utiliser la mémorisation de vos mots de passes</u></b> sur site web, <i>cela permet que personnes ne puissent utiliser votre ordinateur ou périphérique internet.</i><br>
          - <b>Ne pas utiliser les mêmes identifiants.</b><br>
          - <u>Effacez vos cookies en supprimant vos données de navigations</u> <i>(comme la supression de l'historique de navigation).</i><br>
@@ -56,7 +56,7 @@
          <h6><span style="color: rgb(255, 255, 255);"><b>Exercice "Test d'un cookie" :</b></span></h6><br>
          
          <h6>Voici <u>un cookie sous forme de pub</u> comme vous pourrez avoir sur un site web tout à fait normal: </h6>
-           <button>Cookie</button>
+           <button onclick="myFunction()">Cookie</button>
            <div class="popup-wrapper">
                <div class="popup">
                    <div class="popup-close">x</div>
@@ -65,8 +65,17 @@
                        <h6>Ce n'est pas une arnaque.</h6>
                        <br>
                        <a href="https://hackcess.org">Cliquez-ici!</a>
+                     
                    </div>
+            
+                   <script>
+                    function myFunction() {
+                      document.getElementById("demo").innerHTML = "Il se pourrait que ...";
+                    }
+                    </script>
+       
                </div>
+               <center><h5 id="demo"></h5></center>
            </div>
            <script src="../js/popup.js"></script><br><br>
          
@@ -114,6 +123,7 @@
 
 
          <br><br><center><a href="#">Haut de page</a></center>
+         <br><br><center><a href="modules.html">Retour aux modules</a></center>
          
        </div> 
        </div>
