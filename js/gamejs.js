@@ -245,13 +245,15 @@ class Console extends GameObject{
         this._element.addEventListener("keydown", this.userevent.bind(this));
         this.commands={
             "?":"${HELP}",
+			"hackcess":"${HACKCESS_RES}"
         };
         this.variables={
             "HELP":"Help context",
             "DEFAULT": "Commande non reconnue.",
             "CORRECT_ANS": "Bonne réponse, vous passez au niveau suivant",
             "BAD_ANS":"mauvaise réponse, essayez encore.",
-            "FINISH": "Bravo vous avez finit!"
+            "FINISH": "Bravo vous avez finit!",
+			"HACKCESS_RES": "https://aladecouverteducyber.hackcess.org/"
         };
         this.levels=[];
         this.activeLevelIndex=0
