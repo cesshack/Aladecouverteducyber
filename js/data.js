@@ -1,6 +1,6 @@
 var LEVELDATA=[
     {
-        "question": "Quel est le nom de l'attaque qui à utilisé des ransomwares en 2017 ?",
+        "question": "Quel est le nom de l'attaque qui a utilisé des ransomwares en 2017 ?",
         "ans":"wannacry",
     },
     {
