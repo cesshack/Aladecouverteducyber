@@ -9,7 +9,7 @@ var LEVELDATA=[
     },
     {
         "question": "Combien de documents confidentiels ont fuitée pendant l'attaque de Panama Papers ?",
-        "ans":"11,5 millions",
+        "ans":"-45",
     },
     {
         "question": "Quel est l'annee de 4?",
