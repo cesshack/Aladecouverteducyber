@@ -253,7 +253,7 @@ class Console extends GameObject{
             "CORRECT_ANS": "Bonne réponse, vous passez au niveau suivant",
             "BAD_ANS":"mauvaise réponse, essayez encore.",
             "FINISH": "Bravo vous avez finit!",
-			"HACKCESS_RES": "https://aladecouverteducyber.hackcess.org/"
+			"HACKCESS_RES": "<a href='https://aladecouverteducyber.hackcess.org/' target='_blank' rel='noreferrer noopener'>Lien</a>"
         };
         this.levels=[];
         this.activeLevelIndex=0
@@ -283,14 +283,14 @@ class Console extends GameObject{
                 this.consoleuserinput.delete_char();
             }
             else if((e.keyCode>64 && e.keyCode<91)||(e.keyCode>47 && e.keyCode<58)||e.keyCode==32||e.keyCode==188){
-                e.preventDefault();
+                //e.preventDefault();
                 this.consoleuserinput.add_char(e.key);
             }
             if(e.keyCode==13){
                 this.lock()
                 let uinput = this.consoleuserinput.finish();
-                if (uinput in this.commands){
-                    let line = this.interpret(this.commands[uinput]);
+                if (uinput.toLowerCase() in this.commands){
+                    let line = this.interpret(this.commands[uinput.toLowerCase()]);
                     this.createMessage(line);
                 }
                 else{
@@ -356,10 +356,12 @@ class Console extends GameObject{
 class ConsoleMessage extends GameObject{
     init(console, msg=null){
         this.parent=console;
-        this.msg=msg;
+        this.finalmsg =msg;
+        this.msg=msg.replace(/<\/?[^>]+(>|$)/g, "");
     }
     setMsg(msg){
-        this.msg=msg;
+        this.finalmsg =msg;
+        this.msg=msg.replace(/<\/?[^>]+(>|$)/g, "");
     }
     create_elem(){
         this.pointer=0;
@@ -371,6 +373,7 @@ class ConsoleMessage extends GameObject{
         this._element.innerHTML= this.msg.slice(0, this.pointer)
         if(this.pointer==this.msg.length){
             clearInterval(this.animation)
+            this._element.innerHTML= this.finalmsg
             this.parent.finishMessage()
         }
         this.pointer+=1
