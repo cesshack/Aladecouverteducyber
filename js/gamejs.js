@@ -426,7 +426,7 @@ class Level extends GameObject{
         }
     }
     interpret(uinput){
-        if(uinput == this.settings["ans"]){
+        if(uinput.toLowerCase() == this.settings["ans"].toLowerCase()){
             return 1
         }
         else{
