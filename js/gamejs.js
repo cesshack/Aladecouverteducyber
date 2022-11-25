@@ -239,9 +239,6 @@ class Console extends GameObject{
         this._element.setAttribute("tabindex",0);
         this.consolemessage = this.engine.createObject("consolemessage", null, null, [this, msg])
         this.consoleuserinput= this.engine.createObject("consoleuserinput", null, null, [this])
-        if(msg){
-            this.createMessage(msg);
-        }
         this._element.addEventListener("keydown", this.userevent.bind(this));
         this.commands={
             "?":"${HELP}",
@@ -250,15 +247,19 @@ class Console extends GameObject{
         this.variables={
             "HELP":"Help context",
             "DEFAULT": "Commande non reconnue.",
-            "CORRECT_ANS": "Bonne réponse, vous passez au niveau suivant",
+            "CORRECT_ANS": "Bonne réponse, vous passez au niveau suivant: \n ${HELP}",
             "BAD_ANS":"mauvaise réponse, essayez encore.",
             "FINISH": "Bravo vous avez finit!",
 			"HACKCESS_RES": "<a href='https://aladecouverteducyber.hackcess.org/' target='_blank' rel='noreferrer noopener'>Lien</a>"
         };
         this.levels=[];
-        this.activeLevelIndex=0
+        this.activeLevelIndex=0;
         this.activeLevel=null;
         this.initLevels();
+        if(msg){
+            msg =this.interpret(msg)
+            this.createMessage(msg);
+        }
     }
 
     initLevels(){
@@ -302,10 +303,10 @@ class Console extends GameObject{
                             this.createMessage(line);
                         }
                         else{
-                            line = this.interpret(this.variables["CORRECT_ANS"]);
                             this.activeLevelIndex+=1;
-                            this.createMessage(line);
                             this.loadlevel();
+                            line = this.interpret(this.variables["CORRECT_ANS"]);
+                            this.createMessage(line);
                         }
                     }
                     else{
