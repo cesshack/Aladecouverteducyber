@@ -414,3 +414,10 @@ a::after {
     opacity: 0;
     transition: opacity 1.5s ease-out;
 }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
