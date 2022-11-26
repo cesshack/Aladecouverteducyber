@@ -249,7 +249,7 @@ class Console extends GameObject{
             "DEFAULT": "Commande non reconnue.",
             "CORRECT_ANS": "Bonne réponse, vous passez au niveau suivant: \n ${HELP}",
             "BAD_ANS":"mauvaise réponse, essayez encore.",
-            "FINISH": "Bravo vous avez finit!",
+            "FINISH": "Bravo vous avez finit! Vous pouvez continuer sur le module suivant",
 			"HACKCESS_RES": "<a href='https://aladecouverteducyber.hackcess.org/' target='_blank' rel='noreferrer noopener'>Lien</a>"
         };
         this.levels=[];
@@ -279,7 +279,7 @@ class Console extends GameObject{
     }
 
     userevent(e){
-        if (!this.locked){
+        if (this.locked==0){
             if(e.keyCode==8){
                 this.consoleuserinput.delete_char();
             }
@@ -288,7 +288,6 @@ class Console extends GameObject{
                 this.consoleuserinput.add_char(e.key);
             }
             if(e.keyCode==13){
-                this.lock()
                 let uinput = this.consoleuserinput.finish();
                 if (uinput.toLowerCase() in this.commands){
                     let line = this.interpret(this.commands[uinput.toLowerCase()]);
@@ -300,6 +299,9 @@ class Console extends GameObject{
                     if (res){
                         if(this.activeLevelIndex==this.levels.length-1){
                             line = this.interpret(this.variables["FINISH"]);
+                            this.setVariable("HELP",this.variables["FINISH"])
+                            this.setVariable("CORRECT_ANS",this.variables["FINISH"])
+                            this.setVariable("BAD_ANS",this.variables["FINISH"])
                             this.createMessage(line);
                         }
                         else{
@@ -314,7 +316,6 @@ class Console extends GameObject{
                         this.createMessage(line);
                     }
                 }
-                this.unlock()
             }
         }
     }
@@ -330,6 +331,7 @@ class Console extends GameObject{
         }
         return line
     }
+
     createMessage(msg){
         this.lock();
         this.consolemessage.setMsg(msg)
@@ -359,14 +361,16 @@ class ConsoleMessage extends GameObject{
         this.parent=console;
         this.finalmsg =msg;
         this.msg=msg.replace(/<\/?[^>]+(>|$)/g, "");
+        this.parent.lock()
     }
     setMsg(msg){
         this.finalmsg =msg;
         this.msg=msg.replace(/<\/?[^>]+(>|$)/g, "");
     }
     create_elem(){
-        this.pointer=0;
+        this.pointer=1;
         this.createElement("div");
+        this._element.innerHTML= this.msg.slice(0, 1)
         this.parent.add_element(this._element);
         this.animation= setInterval(this.draw.bind(this),10);
     }
@@ -374,6 +378,7 @@ class ConsoleMessage extends GameObject{
         this._element.innerHTML= this.msg.slice(0, this.pointer)
         if(this.pointer==this.msg.length){
             clearInterval(this.animation)
+            this.pointer=0
             this._element.innerHTML= this.finalmsg
             this.parent.finishMessage()
         }
