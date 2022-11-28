@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<!--
-        © Auteur : Théo Dufour, Julien Andreoli, Léonardo Heron, Aymeric Foulie<br>
-       >Ce(tte) œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0 International. 
-    -->
     <meta charset="UTF-8">
     <title>Cyberharcelement</title>
     <link rel="icon" type="image/ico" href="../Images/favicon.ico">
@@ -24,11 +20,7 @@
 <body>
 
   <style>
-	body,html{
 
-		background-image: url(https://media.tenor.com/iVe379jHOJIAAAAC/hacker-hack.gif);
-
-	}
 	
     a::before {
       content: "";
@@ -68,12 +60,14 @@
         <div class="row">
           <div class="col-lg-6 m-auto">
             <form class="password-strength form p-4">
-              <h3 class="form__title text-center mb-4">Entrez votre mot de passe</h3>
+              <h3 class="form__title text-center mb-4">Entrez votre mot de passe </h3>
               <div class="form-group">
-                <label for="password-input">Mot de passe</label>
+                <label for="password-input">Mot de passe :</label>
                 <div class="input-group">
-                  <input class="password-strength__input form-control" type="password" id="password-input" aria-describedby="passwordHelp" placeholder="Entrez votre mot de passe"/>
+					<br>
+                  <input style="height: 64px;width:204px;"  class="password-strength__input form-control" type="password" id="password-input" aria-describedby="passwordHelp" placeholder="Entrez votre mot de passe"/>
                   <div class="input-group-append">
+					<br>
                     <button onclick="myFunction()" class="password-strength__visibility btn btn-outline-secondary" type="button"><span class="password-strength__visibility-icon" data-visible="hidden"><i class="fa fa-eye"></i></span><span class="password-strength__visibility-icon js-hidden" data-visible="visible"><i class="fa fa-eye"></i></span>VOIR</button>
                   </div>
 
@@ -358,19 +352,19 @@
 	<h4><span style="color: red;"><b>Exercice "faux profil" :</b></span></h4>
   <br>
 	<center><img src="../Images/faux.jpg" style="max-width:35%; max-height:35%; text-align:center; border: 2px solid black;"><br></center><br>
-	<h6>Avec cet exercice, vous allez voir <i>via un faux profil qu'il est facile d'usurper l'identité</i> de quelqu'un. </h6>
-	<h6>Mise en contexte. Une personne malveillante a créé un faux profil pour se faire passer pour quelqu'un d'autre, la victime.</h6>
-	<h6>Elle a trouvé des informations sur la victime, à partir de son compte instagram.</h6>
-	<h6><b>Allez vous réussir à rerouver ce faux profil ?</b></h6>
+	<h6>Avec cet exercice, vous allez voir <i>via un faux profil qu'il est facile d'usurper l'identité</i> de quelqu'un ou d'un organisme. </h6>
+	<h6>Mise en contexte. Une personne malveillante a créé un faux profil pour se faire passer pour un compte de l'IUT de Roanne .</h6>
+	<h6>Nous avons trouvé des informations sur la victime, à partir de son compte instagram.</h6>
+	<h6><b>Allez vous réussir à retrouver ce faux profil ?</b></h6>
 	<h6><u><i>Les informations à votre disposition :</u></i></h6>
-	<h6>Il se fait passer pour un étudiant à Roanne.</h6>
-	<h6>Il s'agit d'un des 3 comptes proposés :
+	<h6>Il se fait passer pour une autre association à Roanne.</h6>
+	<h6>Il s'agit d'une des 3 comptes proposés :
     <br>
     <br>
  
 	<li><a href="https://www.instagram.com/iutroanne/" target="_blank">iutroanne</a></li>
   <br>
-	<li><a href="https://www.instagram.com/_lil_diab_/" target="_blank">_lil_diab_</a></li>
+	<li><a href="https://www.instagram.com/hack_cess_/" target="_blank">hack_cess_</a></li>
   <br>
 	<li><a href="https://www.instagram.com/hack_cess/" target="_blank">hack_cess</a></li><br>
 	<h6 style="color:rgba(255, 0, 0, 0.795)">Pour trouver le faux compte, cherchez si les photos postées, likes, abonnés, commentaires ou encore la photo de profil est assez crédible.</h6>
@@ -385,17 +379,20 @@
 		</script>
 
 	<div style="color:rgba(255, 0, 0, 0.795)">Choisissez ci-dessous le bon lien pour allez sur instagram : </div><br>
-		<input id="casec" type="checkbox">iutroanne  <br>
-		<input id="casesd" type="checkbox"> _lil_diab_<br>
+		<input id="casec" type="checkbox">iutroanne<br>
+		<input id="casesd" type="checkbox">hack_cess_<br>
 		<input id="cased" type="checkbox"> hack_cess<br>
 		<div style="text-align:center"><input type="button" value="Valider" onClick="valider()"></li><br><br>
-	<h6><u>Si vous n'avez pas trouvé du premier coup, cela peut-être normal</u>, l'objectif d'une personne usurpant une identité est de paraître pour quelqu'un de normal ou même + "vrai" que la personne qu'elle usurpe.</h6>
+	<h6><u>Si vous n'avez pas trouvé du premier coup, cela peut-être normal</u>, l'objectif d'une personne usurpant une identité est de paraître pour quelqu'un de normal ou même + "vrai" que la personne qu'elle usurpe ou de l'organisme.</h6>
 	<h5>Si vous avez trouvé, c'est sûrement que vous avez le bon oeil !</h6>
 		<br>
 	<h4><span style="color: red;"><b>Exercice "Phishing" :</b></span></h4>
+	<br>
 	<h6>L'hameçonnage ou phishing est une forme d'escroquerie sur internet. Le fraudeur se fait passer pour un organisme que vous connaissez (banque, service des impôts, CAF, etc.), en utilisant le logo et le nom de cet organisme.</h6>
-	<h6>Voici un exemple d'email type "phisihing"</h6>
+	<h6>Voici un exemple d'email type "phisihing" : </h6>
+	<br>
 	<img src="../Images/photo.jpg">
+	<br>
 	<br>
 	<h6>Voici le point de vue d'un hacker:</h6>
 	<img src="../Images/povhack.jpg">
@@ -417,20 +414,17 @@
 		<input id="casec" type="checkbox"> https://instagrame.com <br>
 		<input id="casec" type="checkbox"> https://instagramm.fr <br>
 		<input id="casec" type="checkbox"> http://radio-wheel-joke-reaches.trycloud.flare.com/login.html<br>
-		<div style="text-align:center"><input type="button" value="Valider" onClick="vaalider()"></li><br><br>
+		<div style="text-align:center "><input type="button" value="Valider" onClick="vaalider()"></li><br><br>
 	
 	<br>
 
 
 	<br><br><center><a href="#">Haut de page</a></center>
-	<br><br><center><a href="internet.html"> Module Suivant </a></center>
-	<br><br><center><a href="../html/modules.html">Revenir aux modules</a></center><br>	
+	<center><p>ou</p><center>
+	<center><a href="../html/modules.html">Revenir aux modules</a></center><br>	
 	</div>
 	
-	<footer style="color: whitesmoke;text-align: center;padding: 3px;vertical-align: middle;margin-top: 20px;">
-        © Auteur : Théo Dufour, Julien Andreoli, Léonardo Heron, Aymeric Foulie<br>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licence Creative Commons Attribution - Pas d&#39;Utilisation Commerciale - Pas de Modification 4.0 International</a>. 
-    </footer>
+
 
        
    
